@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const { Schema } = mongoose
-const Territorios = mongoose.model(
-    'Territorios',
+const Concluidos = mongoose.model(
+    'Concluidos',
     new Schema (
         {
             numero:{
@@ -12,29 +12,17 @@ const Territorios = mongoose.model(
                 type: String,
                 required: true
             },
-            anotacoes:{
-                type: String,
-                required: false
-            },
-            marcacoes:{
-                type: [String],
-                required: false
-            },
             dataInicio:{
                 type: String,
                 required: true
             },
             dataFinal:{
                 type: String,
-                required: false
-            },
-            concluido:{
-                type: Boolean,
-                required: false
+                required: true
             }
         },
         { timestamps: true }
     )
 )
 
-module.exports = Territorios
+module.exports = Concluidos
